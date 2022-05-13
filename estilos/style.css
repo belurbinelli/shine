@@ -142,3 +142,22 @@ form {
         width: 350px;
     }
 }
+
+.imgs:hover{
+    animation: shine 5s;
+}
+
+@keyframes shine{
+    0%{
+        border-radius:50%;
+    }
+
+    25%{
+        transform: scale(2);
+    }
+
+    50%{
+        transform: translateY(150px);
+    }
+
+}
