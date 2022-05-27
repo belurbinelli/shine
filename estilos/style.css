@@ -1,140 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap");
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 header {
-    grid-area: header;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
 }
 
 header img {
-    padding: 10px;
+  padding: 10px;
 }
 
 .secciones {
-    font-family: 'Noto Serif', serif;
+  font-family: 'Noto Serif', serif;
 }
 
 body {
-    background-color: white;
+  background-color: white;
 }
 
-
 .presentacion {
-    color: rgb(113, 91, 116);
-    font-family: 'Noto Serif', serif;
-    margin-bottom: 50px;
-    align-items: center;
-    grid-area: galeria;
-    display: flex;
-    flex-direction: column;
+  color: #715b74;
+  font-family: 'Noto Serif', serif;
+  margin-bottom: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: galeria;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .presentacion h1 {
-    margin-bottom: 60px;
-    margin-left: 20px;
+  margin-bottom: 60px;
+  margin-left: 20px;
 }
 
 h2 {
-    margin-left: 30px;
-    margin-bottom: 30px;
+  margin-left: 30px;
+  margin-bottom: 30px;
 }
 
 .foto {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10px;
 }
 
 p {
-    margin-bottom: 16px;
-    margin-left: 16px;
+  margin-bottom: 16px;
+  margin-left: 16px;
 }
 
-.picture{
-    width: 600px;
+.picture {
+  width: 600px;
 }
-
 
 .redes {
-    display: flex;
-    margin-left: 30px;
-    justify-content: center;
-
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .mail {
-    display: flex;
-    margin-left: 30px;
-    justify-content: center;
-    font-family: 'Noto Serif', serif;
-    
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Noto Serif', serif;
 }
 
-
 .grilla {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "header"
-        "galeria"
-        "galeria"
-        "footer"
-    ;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "header" "galeria" "galeria" "footer";
 }
 
 .padre {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
 .footer {
-    display: flex;
-    flex-direction: column;
-    grid-area: footer;
-    align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .redesSociales a i {
+  zoom: 200%;
+  color: black;
+}
+
+.footer .redesSociales a i:hover {
+  color: #f86bbf;
 }
 
 .imagen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 15px solid white;
+}
+
+@media screen and (max-width: 599px) {
+  .grilla {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    border: 15px solid white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .padre {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .presentacion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .imgs img {
+    height: auto;
+    width: 400px;
+  }
+  .imagen img {
+    height: auto;
+    width: 350px;
+  }
 }
-
-@media screen and (max-width:599px) {
-    .grilla {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .padre {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .presentacion {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .imgs img {
-        height: auto;
-        width: 400px;
-    }
-
-    .imagen img {
-        height: auto;
-        width: 350px;
-    }
-}
-
-.redesSociales a i{
-    zoom: 200%;
-    color: black;
-}
-
-.redesSociales a i:hover{
-    color: rgb(248, 107, 191);
-}
-
+/*# sourceMappingURL=style.css.map */

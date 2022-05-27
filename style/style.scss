@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap');
+@import "variables";
+@import "generales";
+
+
+@media screen and (max-width:599px) {
+    .grilla {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .padre {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .presentacion {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imgs img {
+        height: auto;
+        width: 400px;
+    }
+
+    .imagen img {
+        height: auto;
+        width: 350px;
+    }
+}
