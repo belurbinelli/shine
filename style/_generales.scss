@@ -1,8 +1,18 @@
+@import "variables";
+
 * {
     padding: 0;
     margin: 0;
 }
 
+@mixin marginlb ($marl,$marb){
+    margin-left: $marl;
+    margin-bottom: $marb;
+}
+
+.dflex{
+    display:flex;
+}
 header {
     grid-area: header;
     img {
@@ -24,29 +34,25 @@ body {
     margin-bottom: 50px;
     align-items: center;
     grid-area: galeria;
-    display: flex;
+    @extend .dflex;
     flex-direction: column;
     h1 {
-        margin-bottom: 60px;
-        margin-left: 20px;
+        @include marginlb(20px,60px);
     }
 }
 
 
 h2 {
-    margin-left: 30px;
-    margin-bottom: 30px;
+    @include marginlb(30px,30px);
 }
 
 .foto {
     margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 10px;
+    @include marginlb(10px,30px);
 }
 
 p {
-    margin-bottom: 16px;
-    margin-left: 16px;
+    @include marginlb(16px,16px);
 }
 
 .picture{
@@ -55,14 +61,14 @@ p {
 
 
 .redes {
-    display: flex;
+    @extend .dflex;
     margin-left: 30px;
     justify-content: center;
 
 }
 
 .mail {
-    display: flex;
+    @extend .dflex;
     margin-left: 30px;
     justify-content: center;
     font-family: 'Noto Serif', serif;
@@ -87,7 +93,7 @@ p {
 }
 
 .footer {
-    display: flex;
+    @extend .dflex;
     flex-direction: column;
     grid-area: footer;
     align-items: center;
@@ -95,12 +101,16 @@ p {
         zoom: 200%;
         color: $negro;
     }
-    .redesSociales a i:hover{
-        color: $rosa;
+
+    @each $name-color, $color in $colores {
+        .fa-#{$name-color}:hover{
+            color: $color;
+        }
     }
 }
 
 .imagen {
-    display: flex;
+    @extend .dflex;
     border: 15px solid $blanco;
 }
+

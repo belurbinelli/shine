@@ -4,6 +4,12 @@
   margin: 0;
 }
 
+.dflex, .presentacion, .redes, .mail, .footer, .imagen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -33,9 +39,6 @@ body {
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: galeria;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -43,8 +46,8 @@ body {
 }
 
 .presentacion h1 {
-  margin-bottom: 60px;
   margin-left: 20px;
+  margin-bottom: 60px;
 }
 
 h2 {
@@ -54,13 +57,13 @@ h2 {
 
 .foto {
   margin-top: 30px;
-  margin-bottom: 30px;
   margin-left: 10px;
+  margin-bottom: 30px;
 }
 
 p {
-  margin-bottom: 16px;
   margin-left: 16px;
+  margin-bottom: 16px;
 }
 
 .picture {
@@ -68,9 +71,6 @@ p {
 }
 
 .redes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-left: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -78,9 +78,6 @@ p {
 }
 
 .mail {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-left: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -104,9 +101,6 @@ p {
 }
 
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -124,14 +118,19 @@ p {
   color: black;
 }
 
-.footer .redesSociales a i:hover {
-  color: #f86bbf;
+.footer .fa-youtube:hover {
+  color: red;
+}
+
+.footer .fa-facebook:hover {
+  color: #3a5795;
+}
+
+.footer .fa-instagram:hover {
+  color: darkviolet;
 }
 
 .imagen {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   border: 15px solid white;
 }
 
