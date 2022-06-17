@@ -26,6 +26,8 @@ header {
 
 body {
     background-color: $blanco;
+    min-height: 100vh;
+    position: relative;
 }
 
 .presentacion {
@@ -41,6 +43,9 @@ body {
     }
 }
 
+main{
+    padding-bottom: 3em;
+}
 
 h2 {
     @include marginlb(30px,30px);
@@ -56,8 +61,12 @@ p {
 }
 
 .picture{
-    width: 600px;
+    width: 50vw;
 }
+.picture2{
+    width: 40vw;
+}
+
 
 
 .redes {
@@ -97,6 +106,10 @@ p {
     flex-direction: column;
     grid-area: footer;
     align-items: center;
+    justify-content: end;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     .redesSociales a i{
         zoom: 200%;
         color: $negro;
@@ -112,5 +125,9 @@ p {
 .imagen {
     @extend .dflex;
     border: 15px solid $blanco;
+}
+
+.imagen img{
+    width: 40vw;
 }
 
